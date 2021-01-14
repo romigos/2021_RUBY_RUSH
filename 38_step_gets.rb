@@ -18,8 +18,13 @@ def check_number(guess, number)
 end
 
 puts 'Загадано число от 0 до 16, отгадайте какое?'
-puts 'У вас 3 попитки'
+puts 'У вас 3 попытки'
 number = rand(16)
-puts number
-guess = gets.chomp.to_i
-3.times { check_number(guess, number) }
+
+3.times do
+  guess = gets.chomp.to_i
+  check_number(guess, number)
+end
+
+puts 'К сожалению вы не угадали число за 3 попытки'
+puts 'Может в следующий раз, а число было: ' + number.to_s
