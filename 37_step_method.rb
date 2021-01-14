@@ -3,7 +3,7 @@ puts 'Сколько вам звезд на погоны?'
 def shoting_star(star)
   cicle = 0
   while cicle < star
-    print "*"
+    print '*'
     cicle += 1
   end
 end
