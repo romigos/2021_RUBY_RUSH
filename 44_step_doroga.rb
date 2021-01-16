@@ -7,6 +7,10 @@ sleep 3
 
 bridge = Bridge.new
 sleep 3
-bridge.open
+if !bridge.is_opened?
+  bridge.open
+end
 sleep 3
 puts 'Ride go on!'
+
+puts bridge.is_opened?.to_s
