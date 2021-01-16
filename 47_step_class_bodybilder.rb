@@ -6,16 +6,14 @@ class BodyBuilder
   end
 
   def pump(muscle)
-    case
-    when muscle == @triceps
+    case muscle
+    when 'triceps'
       @triceps += 1
-    when muscle == @biceps
+    when 'biceps'
       @biceps += 1
     else
-      muscle == @deltovidka
       @deltovidka += 1
     end
-
   end
 
   def show_muscles
