@@ -1,17 +1,23 @@
 class Film
-  def initialize(director, name)
-    @name = name
+  def initialize(title, director)
+    @title = title
     @director = director
   end
-end
 
-film1 = Film.new('Роберт Земекис', 'Форрест Гамп')
-film2 = Film.new('Роберт Земекис', 'Назад в будущее')
+  attr_reader :title
+
+  attr_reader :director
+end
 
 puts 'Фильмы какого режиссера Вы хотите посмотреть?'
-director = STDIN.gets.encode('UTF-8').chomp
+director_name = STDIN.gets.encode('UTF-8').chomp
+films = []
 3.times do
   puts 'Какой-нибудь его хороший фильм?'
+  title_film = STDIN.gets.encode('UTF-8').chomp
+  film = Film.new(title_film, director_name)
+  films << film
 end
-puts 'И сегодня вечером рекомендую посмотреть: ' + director
-puts 'Режиссера: ' + Film.sample
+film = films.sample
+puts "И сегодня вечером рекомендую посмотреть: #{film.title}"
+puts "Режиссера: #{film.director}"
