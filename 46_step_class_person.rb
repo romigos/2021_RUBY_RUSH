@@ -3,6 +3,7 @@ class Person
     @first_name = first_name
     @middle_name = middle_name
     @age = age
+    @film = nil
   end
 
   def full_name
@@ -20,6 +21,14 @@ class Person
       "He is #{@age}" " - young"
     end
 
+  end
+
+  def film=(film)
+    @film = film
+  end
+
+  def film
+    @film
   end
 
 end
